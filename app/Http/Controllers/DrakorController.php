@@ -11,4 +11,8 @@ class DrakorController extends Controller
         $data = Drakor::all();
         return view('index', compact('data'));
     }
+    public function show($id){
+        $data = Drakor::all()->find($id);
+        return view('show',compact('data'));
+    }
 }
