@@ -18,3 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home','DrakorController@index');
+Route::get('/show/{id}','DrakorController@show');
