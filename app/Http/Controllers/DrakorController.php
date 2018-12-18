@@ -12,7 +12,12 @@ class DrakorController extends Controller
         return view('index', compact('data'));
     }
     public function show($id){
-        $data = Drakor::all()->find($id);
-        return view('show',compact('data'));
+        $item = Drakor::all()->find($id);
+        // dd($item);
+        return view('Drakor.show',compact('item'));
+    }
+    public function genre($id){
+        $data = Drakor::all()->where('id_genre',$id);
+        return view('Drakor.genre',compact('data'));
     }
 }

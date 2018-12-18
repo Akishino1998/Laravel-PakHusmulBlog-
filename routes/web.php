@@ -19,3 +19,11 @@ Auth::routes();
 
 Route::get('/home','DrakorController@index');
 Route::get('/show/{id}','DrakorController@show');
+Route::get('/genre/{id}','DrakorController@genre');
+//admin
+Route::get('/admin','adminController@index');
+Route::get('/admin/tambahbaru','adminController@create');
+Route::post('/admin/tambahbaru','adminController@simpan');
+Route::get('/admin/edit/{id}','adminController@edit');
+Route::get('/admin/hapus/{id}','adminController@delete');
+Route::post('/admin/update','adminController@update');
